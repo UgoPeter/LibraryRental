@@ -8,7 +8,7 @@ class Insert_initial_books():
         self.add_books()
 
     def add_books(self):
-        list_of_books = ["Harry Potter", "chuj"]
+        list_of_books = ["Harry Potter", "Malowany Czlowiek", "Folwark Zwierzecy"]
 
         self.cursor.execute('''
             DELETE FROM "books"    
@@ -22,5 +22,3 @@ class Insert_initial_books():
             self.cursor.execute('''
                 INSERT INTO "books" ("name")      
                 VALUES(?)''', (book,))
-
-
