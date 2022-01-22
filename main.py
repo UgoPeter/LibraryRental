@@ -8,6 +8,6 @@ if __name__ == '__main__':
     conn = sqlite3.connect("library.db")
     seed(conn)
     migrate(conn)
-    library = Library(conn).rent_book()
+    Library(conn).rent_book()
 
 
